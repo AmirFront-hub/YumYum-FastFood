@@ -21,12 +21,16 @@ body {
 	top: 17px;
 	left: 310px;
 	justify-content: center;
-	background-color: white;
+	background-color: rgb(238, 238, 238);
 	border-radius: 5px;
 	width: 64px;
 	height: 64px;
 	cursor: pointer;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#cart-btn:active {
+	border: none;
 }
 
 #cart-btn:hover {
