@@ -6,6 +6,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	color: white;
+	text-shadow: 1px 1px 2px #000000;
 }
 
 .menu-container {
@@ -71,7 +72,7 @@ body {
 	flex-direction: column;
 	position: relative;
 	width: 358px;
-	height: 423px;
+	height: 440px;
 	border-radius: 10px;
 	margin: 15px;
 }
@@ -90,10 +91,11 @@ body {
 }
 
 .drinks-menu {
+	font-family: "Montserrat", sans-serif;
 	background-color: rgb(97, 88, 88);
-	font-size: 20px;
-	flex-direction: row;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 	width: 358px;
 	height: 170px;
 	border-radius: 10px;
@@ -106,20 +108,37 @@ body {
 	text-align: left;
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.8em;
+	box-shadow: black;
 }
 
-.d-item  {
+.dips-item  {
 	font-family: "Montserrat", sans-serif;
 	padding: 20px;
 	text-align: left;
 	
 }
 
+.drink-item {
+	font-family: "Montserrat", sans-serif;
+	padding: 20px;
+	text-align: left;
+}
+
+
 .dips-selection {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	padding: 1em;
+	/*padding: 1em;*/
+	gap: 8px;
+	font-size: 15px;
+}
+
+.drink-selection {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	/*padding: 1em;*/
 	gap: 8px;
 	font-size: 15px;
 }
@@ -127,8 +146,15 @@ body {
 
 .dips-selection > div{
 	cursor: pointer;
-    border-radius: 4px;
-	padding: 6px;
+    border-radius: 6px;
+	padding: 8px;
+}
+
+.drink-selection > div{
+	cursor: pointer;
+    border-radius: 6px;
+	padding: 8px;
+	gap: 10px;
 }
 
 input[type="radio"] {
@@ -144,6 +170,13 @@ input[type="radio"] {
 	align-items: center;
 }
 
+.drink-btn {
+	background-color: rgb(131, 124, 124);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
 
 .item-details {
     font-family: "Montserrat";
@@ -153,7 +186,7 @@ input[type="radio"] {
 
 .item-name, .item-price {
 	font-family: "Montserrat", sans-serif;
-	font-size: 1.2em;
+	font-size: 22px;
 }
 
 .line {
