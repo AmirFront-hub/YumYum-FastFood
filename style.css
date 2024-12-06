@@ -1,3 +1,10 @@
+* {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
 body {
 	display: flex;
 	justify-content: center;
@@ -5,16 +12,16 @@ body {
 	height: 100vh;
 	margin: 0;
 	color: white;
-  }
+}
 
-  .menu-container {
+.menu-container {
 	background-color: rgb(72, 144, 120);
 	width: 390px;
 	height: 1068px;
 	position: relative;
-   }
+}
 
-  #cart-btn {
+#cart-btn {
 	position: relative;
 	top: 17px;
 	left: 310px;
@@ -25,36 +32,35 @@ body {
 	height: 64px;
 	cursor: pointer;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+}
 
-  #cart-btn:hover {
+#cart-btn:hover {
 	transform: scale(1.1);
 	box-shadow:  0 0 30px rgba(96, 88, 88);
-  }
+}
 
+.cart-count {
+	width: 25px;
+	height: 25px;     
+	background-color: #EB5757;
+	color: white;             
+	font-weight: bold;  
+	border-radius: 50%;   
+	display: flex;     
+	align-items: center;
+	justify-content: center;
+	text-align: center;   
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: -8px;
+	left: 47px;
+	transition: box-shadow 1s ease;
+}
 
-  	.cart-count {
-		width: 25px;
-		height: 25px;     
-		background-color: #EB5757;
-		color: white;             
-		font-weight: bold;  
-		border-radius: 50%;   
-		display: flex;     
-		align-items: center;
-		justify-content: center;
-		text-align: center;   
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		position: absolute;
-		top: -8px;
-		left: 47px;
-		transition: box-shadow 1s ease;
-	}
-
-  .cart-icon, img {
+.cart-icon, img {
 	position: relative;
 	width: 31.99px;
 	height: 30.72px;
 
-  }
+}
 
