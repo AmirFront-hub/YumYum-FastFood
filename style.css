@@ -37,8 +37,7 @@ body {
 	width: 25px;
 	height: 25px;     
 	background-color: #EB5757;
-	color: white;             
-	font-weight: bold;  
+	color: white;              
 	border-radius: 50%;   
 	display: flex;     
 	align-items: center;
@@ -61,42 +60,87 @@ body {
 .menu-header {
 	padding-left: 20px;
 	padding-top: 20px;
+	padding-bottom: none;
 	font-family: "Montserrat", sans-serif;
 }
 
 .wontons-menu {
 	background-color: rgb(97, 88, 88);
-	text-align: center;
+	text-align: left;
 	font-size: 20px;
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	height: 358px;
-	height: 451px;
+	width: 358px;
+	height: 423px;
 	border-radius: 10px;
-	align-items: center;
-	padding-top: 40px;
 	margin: 15px;
-	gap: 35px;
+}
+
+.dips-menu {
+	background-color: rgb(97, 88, 88);
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 358px;
+	height: 200px;
+	border-radius: 10px;
+	margin: 15px;
+}
+
+.drinks-menu {
+	background-color: rgb(97, 88, 88);
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	width: 358px;
+	height: 200px;
+	border-radius: 10px;
+	margin: 15px;
 }
 
 .item-name, .item-price {
 	font-family: "Montserrat", sans-serif;
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 
-.item, .item-details {
+.item {
+	border-bottom: 1px black dotted;
+	padding: 21px;
+	text-align: left;
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.8em;
 }
 
-.item {
-	border: 1px dotted;
-	padding: 4px;
-	text-align: left;
+.item-details {
+    font-family: "Montserrat";
+    font-size: 0.7em;
+	font-weight: 200 !important;
 }
 
 .line {
 	font-size: 0.8em;
+}
+
+.item:last-child {
+	border: none;
+}
+
+.item:last-child:hover {
+	background-color: rgb(53, 49, 49);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.item:first-child:hover {
+	background-color: rgb(53, 49, 49);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.item:hover {
+	background-color: rgb(53, 49, 49);
 }
 
