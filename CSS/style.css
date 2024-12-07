@@ -185,7 +185,7 @@ input[type="radio"] {
 .item-details {
     font-family: "Montserrat";
     font-size: 0.7em;
-	font-weight: 200 !important;
+	font-weight: 200;
 }
 
 .item-name, .item-price {
