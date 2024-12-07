@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>YumYum</title>
 	<link rel="stylesheet" href="./CSS/style.css">
+	<link rel="stylesheet" href="./CSS/cart.css">
 	<!-------scripts--------->
 	<script type="module" src="./scripts/script.js" defer></script>
 	<script type="module" src="./scripts/menu.js" defer></script>
@@ -15,6 +16,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
 </head>
+
+<!--// MENU //-->
+
 <body>
 	<div class="menu-container">
 		<button id="cart-btn">
@@ -152,5 +156,27 @@
 			</div>
 		</div>
 	</div>
+
+	<!--// Checkout //-->
+<div class="cartoverlay">
+	<div class="cart-container">
+		<button id="cart-btn">
+			<span class="cart-count">0</span>
+			<span  class="cart-icon">
+			<img src="./Images/cart.png" alt="Button Icon"></span>
+		</button>
+
+
+    <footer class="pricebox">
+		<div class="price-details">
+			<div class="p-details">
+				<strong>TOTALT</strong><p>inkl 20% moms</p>
+			</div>
+		<span class="cart-total">0 SEK</span>
+		</div>
+		<Button class="pay-btn">TAKE MY MONEY</Button>
+	</footer>
+</div>
+
 </body>
 </html>
