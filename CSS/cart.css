@@ -5,10 +5,48 @@ body {
 	height: 100vh;
 	margin: 0;
 	color: white;
-	text-shadow: 1px 1px 2px #000000;
+	font-family: "Montserrat", sans-serif;
 }
 .cart-container {
 	background-color: rgb(238, 238, 238);
 	width: 390px;
 	height: 844px;
+}
+
+.pricebox {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin: 1em;
+	gap: 0.7em;
+	width: auto;
+}
+
+.price-details {
+	display: flex;
+	align-items: center;
+	background-color:rgb(194, 193, 193);
+	color: rgb(21, 17, 17);
+	text-shadow: none;
+	padding: 1em;
+	border-radius: 5px;
+	justify-content: space-between;
+}
+
+.pay-btn {
+	font-family: "Montserrat", sans-serif;
+	color: white;
+	background-color: rgb(53, 49, 49);
+	padding: 1.5em;
+	border-radius: 5px;
+	
+}
+
+.cart-total {
+	font-size: 1.5em;
+}
+
+p {
+	margin: 0;
+	font-size: 10px;
 }
