@@ -39,6 +39,10 @@ function populateMenu(menuData) {
 			<span class="item-details">${wonton.ingredients}</span>
 		</div> `
 
+		newDiv.addEventListener("click", () => {
+            addToCart(wonton, newDiv);
+        });
+
     wontonsMenu.append(newDiv)
     })
 
@@ -49,6 +53,11 @@ function populateMenu(menuData) {
             <input type="radio" name="dips">
             <label for="">${dip.name}</label>`
             newDiv2.classList.add("dip-btn")
+
+			newDiv2.addEventListener("click", () => {
+				addToCart(dip, newDiv2);
+			});
+
 			dipsMenu.append(newDiv2);})
 
     drinkList.forEach(
@@ -58,6 +67,11 @@ function populateMenu(menuData) {
             <input type="radio" name="drinks">
             <label for="">${drink.name}</label>`
             newDiv3.classList.add("drink-btn")
-    		drinksMenu.append(newDiv3)})
+
+			newDiv3.addEventListener("click", () => {
+				addToCart(drink, newDiv3);
+			});
+	
+    	drinksMenu.append(newDiv3)})
 }
 populateMenu(await fetchMenuData());
