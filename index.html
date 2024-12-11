@@ -9,10 +9,10 @@
 	<link rel="stylesheet" href="./CSS/style.css">
 	<link rel="stylesheet" href="./CSS/cart.css">
 	<!-------scripts--------->
-	<script type="module" src="./scripts/script.js" defer></script>
-	<script type="module" src="./scripts/menu.js" defer></script>
-	<script type="module" src="./scripts/checkout.js" defer></script>
-	<script type="module" src="./scripts/api.js" defer></script>
+	<script type="module" src="./scripts/script.js"></script>
+	<script type="module" src="./scripts/menu.js"></script>
+	<script type="module" src="./scripts/cart.js"></script>
+	<script type="module" src="./scripts/api.js"></script>
 	<!-------Fonts--------->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +43,7 @@
 
 				<div class="dips-item">
 					<span class="item-name">DIPSÅS</span>
-					<span class="line">............................................</span>
+					<span class="line"></span>
 					<span class="item-price">19 SEK</span> <br>
 				</div>
 
@@ -54,7 +54,7 @@
 			<div class="drinks-menu">
 				<div class="drink-item">
 					<span class="item-name">DRICKA</span>
-					<span class="line">..........................................</span>
+					<span class="line"></span>
 					<span class="item-price">19 SEK</span> <br>
 				</div>
 				
@@ -63,31 +63,30 @@
 		</div>
 	</div>
 
-	<!--// Checkout //-->
-<!--<div class="cartoverlay">
-	<div class="cart-container">
-		<button id="cart-btn">
-			<span class="cart-count">0</span>
-			<span  class="cart-icon">
-			<img src="./Images/cart.png" alt="Button Icon"></span>
-		</button>
+	<section class="cart-overlay">
+		<div class="cart-container">
+			<button id="cart-btn">
+				<span class="cart-count">0</span>
+				<span  class="cart-icon">
+				<img src="./Images/cart.png" alt="Button Icon"></span>
+			</button>
 
 
-    <footer class="pricebox">
-		<div class="price-details">
-			<div class="p-details">
-				<strong>TOTALT</strong><p>inkl 20% moms</p>
+		<footer class="pricebox">
+			<div class="price-details">
+				<div class="p-details">
+					<strong>TOTALT</strong><p>inkl 20% moms</p>
+				</div>
+			<span class="cart-total">0 SEK</span>
 			</div>
-		<span class="cart-total">0 SEK</span>
-		</div>
-		<Button class="pay-btn">TAKE MY MONEY</Button>
-	</footer>
-</div>-->
+			<Button class="pay-btn">TAKE MY MONEY</Button>
+		</footer>
+	</section>
 
 
 	<!--// ETA //-->
 
-	<!--<div class="eta-container">
+	<div class="eta-container">
 
 		<img src="./Images/boxtop.png" alt="boxtop">
 
@@ -104,7 +103,7 @@
 			<Button class="kvitto-btn">SE KVITTO</Button>
 			<button class="neworder-btn">GÖR EN NY BESTÄLLNING</button>
 		</div>
-	</footer>-->
+	</footer>
 
 </body>
 </html>

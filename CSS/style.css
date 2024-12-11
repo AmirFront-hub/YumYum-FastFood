@@ -11,7 +11,7 @@ body {
 .menu-container {
 	background-color: rgb(72, 144, 120);
 	width: 390px;
-	height: 1068px;
+	height: auto;
 	position: relative;
 }
 
@@ -89,7 +89,7 @@ body {
 	text-align: left;
 	width: 358px;
 	height: auto;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 	border-radius: 10px;
 	margin: 15px;
 
@@ -102,7 +102,8 @@ body {
 	flex-direction: column;
 	text-align: left;
 	width: 358px;
-	height: 170px;
+	height: auto;
+	padding-bottom: 15px;
 	border-radius: 10px;
 	margin: 15px;
 }
@@ -144,8 +145,8 @@ body {
 	justify-content: center;
 	flex-wrap: wrap;
 	/*padding: 1em;*/
-	gap: 8px;
-	font-size: 15px;
+	gap: 6px;
+	font-size: 13px;
 }
 
 
@@ -196,6 +197,9 @@ input[type="radio"] {
 
 .line {
 	font-size: 0.8em;
+	flex-grow: inherit;
+	max-width: fit-content;
+	border-bottom: #000000 dotted 1px;
 }
 
 .w-item:last-child {
