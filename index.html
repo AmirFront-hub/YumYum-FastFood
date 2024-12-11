@@ -9,10 +9,9 @@
 	<link rel="stylesheet" href="./CSS/style.css">
 	<link rel="stylesheet" href="./CSS/cart.css">
 	<!-------scripts--------->
-	<script type="module" src="./scripts/script.js"></script>
-	<script type="module" src="./scripts/menu.js"></script>
 	<script type="module" src="./scripts/cart.js"></script>
-	<script type="module" src="./scripts/api.js"></script>
+	<script type="module" src="./scripts/menu.js"></script>
+	<script type="module" src="./scripts/hide-all.js"></script>
 	<!-------Fonts--------->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +63,7 @@
 	</div>
 
 	<section class="cart-overlay">
-		<div class="cart-container">
+		<div class="cart-container"style="display: none;">
 			<button id="cart-btn">
 				<span class="cart-count">0</span>
 				<span  class="cart-icon">
@@ -73,6 +72,7 @@
 
 
 		<footer class="pricebox">
+			<div class="shoppinglist"></div>
 			<div class="price-details">
 				<div class="p-details">
 					<strong>TOTALT</strong><p>inkl 20% moms</p>
@@ -86,7 +86,7 @@
 
 	<!--// ETA //-->
 
-	<div class="eta-container">
+	<div class="eta-container"style="display: none;">
 
 		<img src="./Images/boxtop.png" alt="boxtop">
 

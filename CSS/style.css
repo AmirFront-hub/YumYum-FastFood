@@ -109,7 +109,7 @@ body {
 }
 
 .w-item {
-	border-bottom: 1px black dotted;
+	border-bottom: 3em black dotted;
 	padding: 21px;
 	text-align: left;
 	font-family: "Montserrat", sans-serif;
@@ -183,6 +183,14 @@ input[type="radio"] {
 	align-items: center;
 }
 
+.drink-btn:hover {
+	background-color: rgb(53, 49, 49);
+}
+
+.dip-btn:hover {
+	background-color: rgb(53, 49, 49);
+}
+
 
 .item-details {
     font-family: "Montserrat";
@@ -196,10 +204,10 @@ input[type="radio"] {
 }
 
 .line {
+	flex-direction: row;
 	font-size: 0.8em;
-	flex-grow: inherit;
 	max-width: fit-content;
-	border-bottom: #000000 dotted 1px;
+	border-bottom: #000000 dotted 3px;
 }
 
 .w-item:last-child {
