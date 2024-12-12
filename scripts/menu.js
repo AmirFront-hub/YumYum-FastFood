@@ -1,5 +1,11 @@
+import { populateCart } from "./cart.js";
+
 const apiUrl = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 const menuElement = document.getElementById('menu-items');
+
+let cart=[]
+let cartToSend = [];
+
 async function fetchMenuData() {
     const options = {
         method: "GET",
@@ -18,6 +24,13 @@ async function fetchMenuData() {
     } catch (error){
         console.error("error fetching menu data", error)
     }
+}
+
+function addToCart(item){
+    cart.push(item)
+    cartToSend.push(item.id)
+    console.log(cart)
+    populateCart(cart)
 }
 
 function populateMenu(menuData) {
@@ -40,7 +53,7 @@ function populateMenu(menuData) {
 		</div> `
 
 		newDiv.addEventListener("click", () => {
-            addToCart(wonton, newDiv);
+            addToCart(wonton);
         });
 
     wontonsMenu.append(newDiv)
@@ -55,7 +68,7 @@ function populateMenu(menuData) {
             newDiv2.classList.add("dip-btn")
 
 			newDiv2.addEventListener("click", () => {
-				addToCart(dip, newDiv2);
+				addToCart(dip);
 			});
 
 			dipsMenu.append(newDiv2);})
@@ -69,9 +82,11 @@ function populateMenu(menuData) {
             newDiv3.classList.add("drink-btn")
 
 			newDiv3.addEventListener("click", () => {
-				addToCart(drink, newDiv3);
+				addToCart(drink);
 			});
 	
     	drinksMenu.append(newDiv3)})
 }
 populateMenu(await fetchMenuData());
+
+export {cart, cartToSend};

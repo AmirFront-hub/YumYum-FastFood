@@ -109,12 +109,11 @@ body {
 }
 
 .w-item {
-	border-bottom: 3em black dotted;
 	padding: 21px;
-	text-align: left;
 	font-family: "Montserrat", sans-serif;
 	font-size: 0.8em;
 	box-shadow: black;
+	
 }
 
 .dips-item  {
@@ -204,10 +203,8 @@ input[type="radio"] {
 }
 
 .line {
-	flex-direction: row;
-	font-size: 0.8em;
-	max-width: fit-content;
-	border-bottom: #000000 dotted 3px;
+    border-bottom: 2px dotted rgb(255, 255, 255);
+    flex-grow: 1;
 }
 
 .w-item:last-child {
