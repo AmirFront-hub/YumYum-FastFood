@@ -17,10 +17,12 @@ export function populateCart(cart) {
 
         newDiv.innerHTML = `
         <div class="cart-list">
-            <span class="item-name">${item.name}</span>
-            <span class="line"></span>
-            <span class="item-price">${item.price * item.quantity} SEK</span>
-        </div>`;
+			<div class="cart-list2">
+				<span class="item-name">${item.name}</span>
+				<span class="line"></span>
+				<span class="item-price">${item.price * item.quantity} SEK</span>
+        	</div>
+		</div>`;
 
         const quantityContainer = document.createElement("div");
         const plusButton = document.createElement("button");
