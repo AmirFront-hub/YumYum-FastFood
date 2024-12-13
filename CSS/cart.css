@@ -130,6 +130,6 @@ p {
 	font-size: 1.5em;
 }
 
-/*.hidden {
+.hidden {
     display: none;
-}*/
+}

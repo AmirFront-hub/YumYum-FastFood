@@ -43,6 +43,10 @@ body {
 	border: none;
 }
 
+.neworder-btn:hover {
+	background-color: rgb(107, 106, 106);
+}
+
 .order-number{
 	font-size: 13px;
 }
@@ -59,7 +63,6 @@ body {
 .neworder-btn,.kvitto-btn {
 	font-size: 15px;
 }
-
 
 .hidden {
     display: none;
