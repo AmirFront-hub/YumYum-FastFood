@@ -1,18 +1,19 @@
-import { cart } from "./menu.js";
-import { cartToSend } from "./menu.js";
+// Import cart from menu.js
+import { cart } from "./menu.js"; // Assuming cart is in menu.js
 
 const cartTotal = document.querySelector("#cart-total");
-const paybtn = document.querySelector("#pay-btn");
+const cartCount = document.querySelector(".cart-count");
+const shoppingList = document.querySelector(".shoppinglist");
+const cartList = document.querySelector(".cart-list");
+const newOrderButton = document.querySelector(".neworder-btn");
 
-export function populateCart(cart, cartToSend) {
-    const cartList = document.querySelector(".cart-list");
+
+export function populateCart(cart) {
     cartList.innerHTML = "";
-
-    let total = [];
-
+    let total = 0;
     cart.forEach(item => {
         const newDiv = document.createElement("div");
-        total.push(item.price * item.quantity);
+        total += item.price * item.quantity;
 
         newDiv.innerHTML = `
         <div class="cart-list">
@@ -21,9 +22,6 @@ export function populateCart(cart, cartToSend) {
             <span class="item-price">${item.price * item.quantity} SEK</span>
         </div>`;
 
-        const itemContainer = document.createElement("div");
-        const itemTitle = document.createElement("h3");
-        const itemPrice = document.createElement("h3");
         const quantityContainer = document.createElement("div");
         const plusButton = document.createElement("button");
         const minusButton = document.createElement("button");
@@ -57,12 +55,25 @@ export function populateCart(cart, cartToSend) {
         newDiv.append(quantityContainer);
         cartList.append(newDiv);
     });
-
-    cartTotal.innerText = total.reduce((a, b) => a + b, 0) + " SEK";
+    cartTotal.innerText = total + " SEK";
+    cartCount.textContent = cart.length;
 }
 
 
-function updateCartDisplay() {
-    document.querySelector(".cart-list").innerHTML = "";
-    populateCart(cart, cartToSend); 
+newOrderButton.addEventListener("click", () => {
+
+    cart.length = 0;
+    cartCount.textContent = "0";
+    shoppingList.innerHTML = "";   
+    cartTotal.textContent = "0 SEK";
+
+    const etaSection = document.querySelector("#eta-container");
+    const menuContainer = document.querySelector(".menu-container");
+    etaSection.classList.add("hidden");
+    menuContainer.classList.remove("hidden");
+
+    console.log("New order started! Returning to the menu...");
+});
+
+function updateCartDisplay() {populateCart(cart);
 }
