@@ -6,6 +6,7 @@ const shoppingList = document.querySelector(".shoppinglist");
 const cartList = document.querySelector(".cart-list");
 const newOrderButton = document.querySelector(".neworder-btn");
 
+
 export function populateCart(cart) {
     cartList.innerHTML = "";
     let total = 0;
@@ -15,12 +16,12 @@ export function populateCart(cart) {
 
         newDiv.innerHTML = `
         <div class="cart-list">
-            <div class="cart-list2">
-                <span class="item-name">${item.name}</span>
-                <span class="line"></span>
-                <span class="item-price">${item.price * item.quantity} SEK</span>
-            </div>
-        </div>`;
+			<div class="">
+				<span class="item-name">${item.name}</span>
+				
+				<span class="item-price">${item.price * item.quantity} SEK</span>
+        	</div>
+		</div>`;
 
         const quantityContainer = document.createElement("div");
         const plusButton = document.createElement("button");
@@ -55,27 +56,25 @@ export function populateCart(cart) {
         newDiv.append(quantityContainer);
         cartList.append(newDiv);
     });
-
-   
     cartTotal.innerText = total + " SEK";
     cartCount.textContent = cart.length;
 }
+
 
 newOrderButton.addEventListener("click", () => {
 
     cart.length = 0;
     cartCount.textContent = "0";
-    shoppingList.innerHTML = "";
+    shoppingList.innerHTML = "";   
     cartTotal.textContent = "0 SEK";
 
-    
     const etaSection = document.querySelector("#eta-container");
     const menuContainer = document.querySelector(".menu-container");
     etaSection.classList.add("hidden");
     menuContainer.classList.remove("hidden");
-    populateCart(cart);
+
+    console.log("New order started! Returning to the menu...");
 });
 
-function updateCartDisplay() {
-    populateCart(cart);
+function updateCartDisplay() {populateCart(cart);
 }
