@@ -8,3 +8,4 @@ cartButtons.forEach((cartButton) => {
     cartSection.classList.toggle("hidden");
   });
 });
+
