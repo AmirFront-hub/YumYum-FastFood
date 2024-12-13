@@ -12,6 +12,7 @@
 	<script type="module" src="./scripts/cart.js"></script>
 	<script type="module" src="./scripts/menu.js"></script>
 	<script type="module" src="./scripts/hide-all.js"></script>
+	<script type="module" src="./scripts/script.js"></script>
 	<!-------Fonts--------->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,21 +20,18 @@
 
 </head>
 
-<!--// MENU //-->
-
 <body>
+	<!-- MENU CONTAINER -->
 	<div class="menu-container">
 		<button id="cart-btn">
 			<span class="cart-count">0</span>
-			<span  class="cart-icon">
+			<span class="cart-icon">
 			<img src="./Images/cart.png" alt="Button Icon"></span>
 		</button>
-		
 
 		<header class="menu-header">
 			<h1>Meny</h1>
 		</header>
-
 
 		<div id="menu-items" class="menu-items">
 			<div class="wontons-menu"></div>
@@ -62,16 +60,14 @@
 		</div>
 	</div>
 
-	<section class="cart hidden">
-
-		<div class="cart-container">
-			<button id="cart-btn" class="cart-btn">
-				<span class="cart-count" id="cart-count">0</span>
-				<span  class="cart-icon">
-				<img src="./Images/cart.png" alt="Button Icon"></span>
-			</button>
-			<div class="cart-list"></div>
-
+	<!-- CART CONTAINER -->
+	<div class="cart-container hidden">
+		<button id="cart-btn" class="cart-btn">
+			<span class="cart-count" id="cart-count">0</span>
+			<span class="cart-icon">
+			<img src="./Images/cart.png" alt="Button Icon"></span>
+		</button>
+		<div class="cart-list"></div>
 
 		<footer class="pricebox">
 			<div class="shoppinglist"></div>
@@ -82,31 +78,27 @@
 					</div>
 				<span class="cart-total" id="cart-total">0 SEK</span>
 			</div>
-				<Button class="pay-btn" id="pay-btn">TAKE MY MONEY</Button>
+				<button id="pay-btn" class="pay-btn">TAKE MY MONEY</button>
 		</footer>
-	</section>
+	</div>
 
+	<!-- ETA CONTAINER -->
+	<div id="eta-container" class="eta-container hidden">
+		<img src="./Images/boxtop.png" alt="boxtop">
 
-	<!--// ETA //-->
-	<section class="eta hidden">
-		<div class="eta-container">
+		<footer class="buttom-box">
+			<article class="content">
+				<h2>DINA WONTONS<br>TILLAGAS!</h2>
+				<h3>ETA 5 MIN</h3>
+				<span id="order-number" class="order-number">#4KWSDF2</span>
+			</article>
 
-			<img src="./Images/boxtop.png" alt="boxtop">
-
-			<footer class="buttom-box">
-				<article class="content">
-					<h2>DINA WONTONS<br>TILLAGAS!</h2>
-					<h3>ETA 5 MIN</h3>
-					<span class="order-number">#4KWSDF2</span>
-				</article>
-
-				<div class="btn-option">
-					<Button class="kvitto-btn">SE KVITTO</Button>
-					<button class="neworder-btn">GÖR EN NY BESTÄLLNING</button>
-				</div>
-			</footer>
-		</div>
-	</section>
+			<div class="btn-option">
+				<button class="kvitto-btn">SE KVITTO</button>
+				<button class="neworder-btn">GÖR EN NY BESTÄLLNING</button>
+			</div>
+		</footer>
+	</div>
 
 </body>
 </html>
