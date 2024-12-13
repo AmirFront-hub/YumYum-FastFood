@@ -14,10 +14,11 @@
 	<script type="module" src="./scripts/menu.js"></script>
 	<script type="module" src="./scripts/hide-all.js"></script>
 	<script type="module" src="./scripts/script.js"></script>
+	<script type="module" src="./scripts/receipt.js"></script>
 	<!-------Fonts--------->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=M+PLUS+Rounded+1c&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"rel="stylesheet"/>
 
 </head>
 
@@ -95,13 +96,13 @@
 			</article>
 
 			<div class="btn-option">
-				<button class="kvitto-btn">SE KVITTO</button>
+				<button class="kvitto-btn" id="kvitto-btn">SE KVITTO</button>
 				<button class="neworder-btn">GÖR EN NY BESTÄLLNING</button>
 			</div>
 		</footer>
 	</div>
 
-	<section class="receipt">
+	<section class="receipt hidden">
 		<div class="receipt-container">
 			<header>
 			<div>
@@ -110,7 +111,7 @@
 				<h3>KVITTO</h3>
 				<span id="order-number" class="order-number">#4KWSDF2</span>
 			</header>
-			<div class="price-details">
+			<div class="price-details" id="btn-recep">
 				<div class="p-details">
 					<strong>TOTALT</strong><p>inkl 20% moms</p>
 				</div>

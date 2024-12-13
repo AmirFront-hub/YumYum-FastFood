@@ -4,7 +4,7 @@ body {
 	align-items: center;
 	margin: 0;
 	color: white;
-	font-family: "Montserrat", sans-serif;
+	font-family: "Fira Sans", sans-serif;
 }
 .eta-container {
 	display: flex;
@@ -26,7 +26,8 @@ body {
 	width: auto;
 }
 .kvitto-btn {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 600;
 	color: white;
 	background-color: rgb(96, 88, 88);
 	padding: 2.0em;
@@ -34,13 +35,20 @@ body {
 	border: solid #F4F3F1F0;
 }
 
+.kvitto-btn:hover {
+	background-color: #F4F3F1F0;
+	color: black;
+}
+
 .neworder-btn {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Fira Sans", sans-serif;
+	font-weight: 600;
 	color: white;
 	background-color: rgb(53, 49, 49);
 	padding: 2.0em;
 	border-radius: 5px;
 	border: none;
+	text-shadow: none;
 }
 
 .neworder-btn:hover {
