@@ -4,7 +4,6 @@ const apiUrl = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 const menuElement = document.getElementById('menu-items');
 
 let cart = [];
-let cartToSend = [];
 
 async function fetchMenuData() {
     const options = {
@@ -28,21 +27,27 @@ async function fetchMenuData() {
 
 function addToCart(item) {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
+
+    if (item.type === "dip") {
+        cart = cart.filter(cartItem => cartItem.type !== "dip");
+    }
+    if (item.type === "drink") {
+        cart = cart.filter(cartItem => cartItem.type !== "drink");
+    }
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
         cart.push({ ...item, quantity: 1 });
-        cartToSend.push(item.id);
     }
+
     console.log(cart);
-    populateCart(cart, cartToSend);
+    populateCart(cart);
 }
 
 function populateMenu(menuData) {
     const wontonsMenu = document.querySelector(".wontons-menu");
     const dipsMenu = document.querySelector(".dips-selection");
     const drinksMenu = document.querySelector(".drink-selection");
-
     const wontonList = menuData.items.filter(item => item.type === "wonton");
     const dipsList = menuData.items.filter(item => item.type === "dip");
     const drinkList = menuData.items.filter(item => item.type === "drink");
@@ -93,6 +98,13 @@ function populateMenu(menuData) {
     });
 }
 
-populateMenu(await fetchMenuData());
+async function initMenu() {
+    const menuData = await fetchMenuData();
+    if (menuData) {
+        populateMenu(menuData);
+    }
+}
 
-export { cart, cartToSend };
+initMenu();
+
+export { cart };

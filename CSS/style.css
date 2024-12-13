@@ -135,15 +135,8 @@ body {
 
 .w-item:hover {
 	background-color: rgb(53, 49, 49);
-	border: auto;
+	border-radius: 8px;
 }
-
-.w-item:last-child:hover {
-	background-color: rgb(53, 49, 49);
-	border-top-left-radius: 12px;
-	border-top-right-radius: 12px;
-}
-
 
 
 input[type="radio"] {

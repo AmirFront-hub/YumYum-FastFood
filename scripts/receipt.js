@@ -26,3 +26,5 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("One or more elements are missing from the DOM");
     }
 });
+
+

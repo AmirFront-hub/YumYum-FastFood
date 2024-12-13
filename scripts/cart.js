@@ -2,6 +2,7 @@ import { cart } from "./menu.js";
 
 const cartTotal = document.querySelector("#cart-total");
 const cartCount = document.querySelector(".cart-count");
+const cartButton = document.querySelector("#cart-btn");
 const shoppingList = document.querySelector(".shoppinglist");
 const cartList = document.querySelector(".cart-list");
 const newOrderButton = document.querySelector(".neworder-btn");
