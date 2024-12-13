@@ -1,229 +1,174 @@
-
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-	color: white;
-	text-shadow: 1px 1px 2px #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: white;
+    text-shadow: 1px 1px 2px #000000;
+    font-family: "Montserrat", sans-serif;
 }
 
 .menu-container {
-	background-color: rgb(72, 144, 120);
-	width: 390px;
-	height: auto;
-	position: relative;
+    background-color: rgb(72, 144, 120);
+    width: 390px;
+    height: auto;
+    position: relative;
 }
 
 #cart-btn {
-	position: relative;
-	top: 17px;
-	left: 310px;
-	justify-content: center;
-	background-color: rgb(238, 238, 238);
-	border-radius: 5px;
-	width: 64px;
-	height: 64px;
-	cursor: pointer;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 17px;
+    left: 310px;
+    justify-content: center;
+    background-color: rgb(238, 238, 238);
+    border-radius: 5px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #cart-btn.no-border {
-	border: none;
+    border: none;
 }
 
 #cart-btn:hover {
-	transform: scale(1.1);
-	box-shadow:  0 0 30px rgba(96, 88, 88);
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(96, 88, 88);
 }
 
 .cart-count {
-	width: 25px;
-	height: 25px;     
-	background-color: #EB5757;
-	color: white;              
-	border-radius: 50%;   
-	display: flex;     
-	align-items: center;
-	justify-content: center;
-	text-align: center;   
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	position: absolute;
-	top: -8px;
-	left: 47px;
-	transition: box-shadow 1s ease;
+    width: 25px;
+    height: 25px;
+    background-color: #EB5757;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -8px;
+    left: 47px;
+    transition: box-shadow 1s ease;
 }
 
 .cart-icon, img {
-	position: relative;
-	width: 31.99px;
-	height: 30.72px;
-
+    position: relative;
+    width: 31.99px;
+    height: 30.72px;
 }
 
 .menu-header {
-	padding-left: 20px;
-	padding-top: 15px;
-	font-family: "Montserrat", sans-serif;
+    padding-left: 20px;
+    padding-top: 15px;
 }
 
-.wontons-menu {
-	background-color: rgb(97, 88, 88);
-	text-align: left;
-	font-size: 20px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	width: 358px;
-	height: 440px;
-	border-radius: 10px;
-	margin: 15px;
+.wontons-menu, .dips-menu, .drinks-menu {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(97, 88, 88);
+    text-align: left;
+    border-radius: 10px;
+    margin: 15px;
 }
 
-.dips-menu {
-	font-family: "Montserrat", sans-serif;
-	background-color: rgb(97, 88, 88);
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	text-align: left;
-	width: 358px;
-	height: auto;
-	padding-bottom: 15px;
-	border-radius: 10px;
-	margin: 15px;
-
+.wontons-menu, .dips-menu, .drinks-menu {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
 }
 
-.drinks-menu {
-	font-family: "Montserrat", sans-serif;
-	background-color: rgb(97, 88, 88);
-	display: flex;
-	flex-direction: column;
-	text-align: left;
-	width: 358px;
-	height: auto;
-	padding-bottom: 15px;
-	border-radius: 10px;
-	margin: 15px;
+.dips-menu, .drinks-menu {
+    height: auto;
+    padding-bottom: 15px;
 }
 
-.w-item {
-	padding: 21px;
-	font-family: "Montserrat", sans-serif;
-	font-size: 0.8em;
-	box-shadow: black;
-	
+.w-item, .dips-item, .drink-item {
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    text-align: left;
+    box-shadow: black;
 }
 
-.dips-item  {
-	font-family: "Montserrat", sans-serif;
-	padding: 20px;
-	text-align: left;
-	
+.dips-selection, .drink-selection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
 }
 
-.drink-item {
-	font-family: "Montserrat", sans-serif;
-	padding: 20px;
-	text-align: left;
-}
-
-
-.dips-selection {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	/*padding: 1em;*/
-	gap: 8px;
-	font-size: 13px;
-}
-
-.drink-selection {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	/*padding: 1em;*/
-	gap: 6px;
-	font-size: 13px;
-}
-
-
-.dips-selection > div{
-	cursor: pointer;
+.dips-selection > div, .drink-selection > div {
+    cursor: pointer;
     border-radius: 6px;
-	padding: 8px;
+    padding: 8px;
 }
 
-.drink-selection > div{
-	cursor: pointer;
+.dip-btn, .drink-btn {
+    background-color: rgb(131, 124, 124);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     border-radius: 6px;
-	padding: 8px;
-	gap: 10px;
+    padding: 8px;
+    transition: background-color 0.2s ease;
 }
 
-input[type="radio"] {
-    display: none; 
-	margin: 0;
-	text-align: center;
+.dip-btn:hover, .drink-btn:hover {
+    background-color: rgb(53, 49, 49);
 }
-
-.dip-btn {
-	background-color: rgb(131, 124, 124);
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-}
-
-.drink-btn {
-	background-color: rgb(131, 124, 124);
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-}
-
-.drink-btn:hover {
-	background-color: rgb(53, 49, 49);
-}
-
-.dip-btn:hover {
-	background-color: rgb(53, 49, 49);
-}
-
 
 .item-details {
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     font-size: 0.7em;
-	font-weight: 200;
+    font-weight: 200;
 }
 
 .item-name, .item-price {
-	font-family: "Montserrat", sans-serif;
-	font-size: 22px;
-}
-
-.line {
-    border-bottom: 2px dotted rgb(255, 255, 255);
-    flex-grow: 1;
-}
-
-.w-item:last-child {
-	border: none;
-}
-
-.w-item:last-child:hover {
-	background-color: rgb(53, 49, 49);
-	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-.w-item:first-child:hover {
-	background-color: rgb(53, 49, 49);
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
 }
 
 .w-item:hover {
 	background-color: rgb(53, 49, 49);
+	border: auto;
 }
 
+.w-item:last-child:hover {
+	background-color: rgb(53, 49, 49);
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+}
+
+
+
+input[type="radio"] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .menu-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .cart-count {
+        font-size: 0.8em;
+        width: 20px;
+        height: 20px;
+        top: -10px;
+    }
+
+    .cart-icon, img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .wontons-menu, .dips-menu, .drinks-menu {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
