@@ -165,6 +165,10 @@ p {
 	border: none;
 }
 
+.cart-container .cart-count {
+	display: none;
+}
+
 @media (max-width: 600px) {
     .cart-container {
         width: 100%;
