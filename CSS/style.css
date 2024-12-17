@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     justify-content: center;
@@ -6,7 +7,7 @@ body {
     color: white;
     text-shadow: 1px 1px 2px #000000;
     font-family: "Fira Sans", sans-serif;
-	font-weight: 500;
+    font-weight: 500;
 }
 
 .menu-container {
@@ -14,6 +15,7 @@ body {
     width: 390px;
     height: auto;
     position: relative;
+    margin: 20px;
 }
 
 #cart-btn {
@@ -72,9 +74,6 @@ body {
     text-align: left;
     border-radius: 10px;
     margin: 15px;
-}
-
-.wontons-menu, .dips-menu, .drinks-menu {
     display: flex;
     flex-direction: column;
     width: 358px;
@@ -86,14 +85,8 @@ body {
 }
 
 .line {
-	flex-grow: 1;
-	border-bottom: white dotted 1px;
-}
-
-.w-item {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+    flex-grow: 1;
+    border-bottom: white dotted 1px;
 }
 
 .w-item, .dips-item, .drink-item {
@@ -136,12 +129,12 @@ body {
     font-family: "Fira Sans", sans-serif;
     font-size: 0.8em;
     font-weight: 200;
-	padding-top: 4px;
+    padding-top: 4px;
 }
 
 .textorder {
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .item-name, .item-price {
@@ -150,35 +143,101 @@ body {
 }
 
 .w-item:hover {
-	background-color: rgb(53, 49, 49);
-	border-radius: 8px;
+    background-color: rgb(53, 49, 49);
+    border-radius: 8px;
 }
-
 
 input[type="radio"] {
     display: none;
 }
 
-@media (max-width: 600px) {
+
+@media (min-width: 500px) and (max-width: 1024px) {
+    
     .menu-container {
-        width: 100%;
-        padding: 1rem;
+        width: 80%;
+        max-width: 800px; 
+        
+    }
+
+    #cart-btn {
+        top: 15px;
+        left: 20px;
     }
 
     .cart-count {
-        font-size: 0.8em;
-        width: 20px;
-        height: 20px;
-        top: -10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+        top: -12px;
     }
 
-    .cart-icon, img {
-        width: 25px;
-        height: 25px;
+    .wontons-menu, .dips-menu, .drinks-menu {
+		width: auto;
+    }
+
+    .w-item, .dips-item, .drink-item {
+        font-size: 1.2rem;
+        padding: 18px;
+    }
+
+    .dips-selection, .drink-selection {
+        font-size: 15px;
+    }
+
+
+    .dip-btn, .drink-btn {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .item-name, .item-price {
+        font-size: 24px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .menu-container {
+        width: 60%; 
+        max-width: 1000px;
+        padding: 2rem;
+    }
+
+	#cart-btn {
+        top: 15px;
+        left: 20px;
+    }
+
+    
+    .cart-count {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+        top: -15px;
     }
 
     .wontons-menu, .dips-menu, .drinks-menu {
         width: 100%;
-        margin: 10px 0;
+        margin: 20px 0;
+    }
+
+    .w-item, .dips-item, .drink-item {
+        font-size: 1.3rem;
+        padding: 22px;
+    }
+
+    .dips-selection, .drink-selection {
+        font-size: 18px;
+    }
+
+    
+    .dip-btn, .drink-btn {
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .item-name, .item-price {
+        font-size: 26px;
     }
 }
