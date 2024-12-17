@@ -1,4 +1,4 @@
-import { populateCart } from "./cart.js";
+import { populateCart, resetCart } from "./menu.js";
 
 document.addEventListener("DOMContentLoaded", function () {
     const kvittoBtn = document.getElementById("kvitto-btn");
@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 menuContainer.classList.remove("hidden");
                 receiptContainer.classList.add("hidden");
                 cartContainer.classList.add("hidden");
-                populateCart([]);
+
+                resetCart();
             });
         });
     } else {
