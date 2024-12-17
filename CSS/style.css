@@ -113,6 +113,10 @@ body {
     padding: 8px;
 }
 
+.receipt-details {
+	font-weight: 700;
+}
+
 .dip-btn:hover, .drink-btn:hover {
     background-color: rgb(53, 49, 49);
 }
@@ -150,7 +154,6 @@ input[type="radio"] {
     .menu-container {
         width: 80%;
         max-width: 800px; 
-        
     }
 
     .wontons-menu, .dips-menu, .drinks-menu {

@@ -19,11 +19,11 @@ body {
 }
 
 .btn-option {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-    gap: 0.7em;
-    width: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding-top: 1em;
+    max-width: auto;
 }
 
 .kvitto-btn {
@@ -43,7 +43,7 @@ body {
 
 .neworder-btn {
     font-family: "Fira Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     color: white;
     background-color: rgb(53, 49, 49);
     padding: 2.0em;
@@ -70,7 +70,8 @@ body {
 }
 
 .neworder-btn, .kvitto-btn {
-    font-size: 15px;
+    font-size: 24px;
+	line-height: 28.8px;
 }
 
 
@@ -105,7 +106,8 @@ body {
 @media (min-width: 1025px) {
     .eta-container {
         width: auto;
-        max-width: auto;
+        min-width:390px;
+		max-width:800px;
         height: auto;
         padding: 2rem;
     }
