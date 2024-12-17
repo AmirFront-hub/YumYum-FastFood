@@ -26,12 +26,13 @@
 	
 	<!-- MENU CONTAINER -->
 	<div class="menu-container">
-		<button id="cart-btn">
+		<div class="button-div">
 			<span class="cart-count">0</span>
-			<span class="cart-icon">
-			<img src="./Images/cart.png" alt="Button Icon"></span>
-		</button>
-
+			<button id="cart-btn">
+				<span class="cart-icon">
+				<img src="./Images/cart.png" alt="Button Icon"></span>
+			</button>
+		</div>
 		<header class="menu-header">
 			<h1>Meny</h1>
 		</header>
@@ -65,11 +66,13 @@
 
 	<!-- CART CONTAINER -->
 	<div class="cart-container hidden">
-		<button id="cart-btn" class="cart-btn">
-			<span class="cart-count" id="cart-count">0</span>
-			<span class="cart-icon">
-			<img src="./Images/cart.png" alt="Button Icon"></span>
-		</button>
+		<div class="button-div">
+				<button id="cart-btn" class="cart-btn">
+				<span class="cart-count" id="cart-count">0</span>
+				<span class="cart-icon">
+				<img src="./Images/cart.png" alt="Button Icon"></span>
+			</button>
+		</div>
 		<div class="cart-list"></div>
 
 		<footer class="pricebox">

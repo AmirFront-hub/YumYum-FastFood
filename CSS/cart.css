@@ -38,6 +38,7 @@ p {
 .pricebox {
     display: flex;
     flex-direction: column;
+	position: sticky;
     margin: 1em;
     gap: 0.7em;
     width: auto;

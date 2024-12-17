@@ -33,7 +33,7 @@ export function populateCart(cart = []) {
             const newDiv = document.createElement("div");
             total += item.price * item.quantity;
 
-            newDiv.innerHTML = `                
+            newDiv.innerHTML = `
             <div class="cart-item">
                 <div class="textordercart">
                     <span class="item-name">${item.name}</span>
@@ -79,9 +79,9 @@ export function populateCart(cart = []) {
     }
 
     cartTotal.innerText = total + " SEK";
-    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-    cartCount.textContent = totalItems;  // Update cart count
 
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCount.textContent = totalItems;
     console.log("Cart updated:", cart);
 }
 
@@ -92,9 +92,6 @@ newOrderButton.addEventListener("click", () => {
     cartList.innerHTML = "<p>Your cart is empty!</p>";
     cartTotal.textContent = "0 SEK";
     payButton.disabled = true;
-
-    // Reset cart in localStorage
-    localStorage.removeItem("cart");
 
     const etaSection = document.querySelector("#eta-container");
     const menuContainer = document.querySelector(".menu-container");

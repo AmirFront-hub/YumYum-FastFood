@@ -18,11 +18,16 @@ body {
     margin: 20px;
 }
 
+.button-div {
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 17px;
+}
+
 #cart-btn {
-    position: relative;
-    top: 17px;
-    left: 310px;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
     background-color: rgb(238, 238, 238);
     border-radius: 5px;
     width: 64px;
@@ -33,11 +38,6 @@ body {
 
 #cart-btn.no-border {
     border: none;
-}
-
-#cart-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(96, 88, 88);
 }
 
 .cart-count {
@@ -51,21 +51,14 @@ body {
     justify-content: center;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: -8px;
-    left: 47px;
-    transition: box-shadow 1s ease;
+	position: relative;
+    top: -5px;
+    left: 72px;
 }
 
-.cart-icon, img {
-    position: relative;
-    width: 31.99px;
-    height: 30.72px;
-}
 
 .menu-header {
     padding-left: 20px;
-    padding-top: 15px;
 }
 
 .wontons-menu, .dips-menu, .drinks-menu {
@@ -118,12 +111,12 @@ body {
     cursor: pointer;
     border-radius: 6px;
     padding: 8px;
-    transition: background-color 0.2s ease;
 }
 
 .dip-btn:hover, .drink-btn:hover {
     background-color: rgb(53, 49, 49);
 }
+
 
 .item-details {
     font-family: "Fira Sans", sans-serif;
@@ -160,18 +153,6 @@ input[type="radio"] {
         
     }
 
-    #cart-btn {
-        top: 15px;
-        left: 20px;
-    }
-
-    .cart-count {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
-        top: -12px;
-    }
-
     .wontons-menu, .dips-menu, .drinks-menu {
 		width: auto;
     }
@@ -202,19 +183,6 @@ input[type="radio"] {
         width: 60%; 
         max-width: 1000px;
         padding: 2rem;
-    }
-
-	#cart-btn {
-        top: 15px;
-        left: 20px;
-    }
-
-    
-    .cart-count {
-        width: 40px;
-        height: 40px;
-        font-size: 1.3em;
-        top: -15px;
     }
 
     .wontons-menu, .dips-menu, .drinks-menu {
