@@ -35,11 +35,11 @@ async function fetchMenuData() {
 function addToCart(item) {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
-    // increase its quantity
+    // increase quantity
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
-        // add it with quantity 1 If it doesn't exist, 
+        // quantity 1 if it doesn't exist
         cart.push({ ...item, quantity: 1 });
     }
 
@@ -58,7 +58,7 @@ function populateMenu(menuData) {
 
     wontonList.forEach(wonton => {
         const newDiv = document.createElement("div");
-        newDiv.innerHTML = `
+        newDiv.innerHTML = `                
         <div class="w-item">
             <div class="textorder">
                 <span class="item-name">${wonton.name}</span>
@@ -77,7 +77,7 @@ function populateMenu(menuData) {
 
     dipsList.forEach(dip => {
         const newDiv = document.createElement("div");
-        newDiv.innerHTML = `
+        newDiv.innerHTML = `                
         <input type="radio" name="dips">
         <label>${dip.name}</label>`;
         newDiv.classList.add("dip-btn");
@@ -91,7 +91,7 @@ function populateMenu(menuData) {
 
     drinkList.forEach(drink => {
         const newDiv = document.createElement("div");
-        newDiv.innerHTML = `
+        newDiv.innerHTML = `                
         <input type="radio" name="drinks">
         <label>${drink.name}</label>`;
         newDiv.classList.add("drink-btn");
@@ -117,4 +117,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initMenu();
 });
 
-export { cart, cartCount, cartList };
+// reset the cart when starting a new order
+export function resetCart() {
+    cart = [];
+    populateCart(cart);
+}
+
+export { cart, cartCount, cartList, populateCart }; 
