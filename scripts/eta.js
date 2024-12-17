@@ -1,4 +1,3 @@
-
 const cartContainer = document.querySelector('.cart-container');
 const etaContainer = document.querySelector('#eta-container');
 const menuContainer = document.querySelector('.menu-container');

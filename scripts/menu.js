@@ -56,9 +56,11 @@ function populateMenu(menuData) {
         const newDiv = document.createElement("div");
         newDiv.innerHTML = `
         <div class="w-item">
+            <div class="textorder">
             <span class="item-name">${wonton.name}</span>
             <span class="line"></span>
-            <span class="item-price">${wonton.price} SEK</span><br>
+            <span class="item-price">${wonton.price} SEK</span>
+            </div>
             <span class="item-details">${wonton.ingredients}</span>
         </div>`;
 

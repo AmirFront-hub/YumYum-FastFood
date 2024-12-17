@@ -5,7 +5,7 @@ const cartCount = document.querySelector(".cart-count");
 const cartButton = document.querySelector(".cart-container #cart-btn");
 const shoppingList = document.querySelector(".shoppinglist");
 const cartList = document.querySelector(".cart-list");
-const newOrderButton = document.querySelector(".neworder-btn");
+const newOrderButton = document.querySelectorAll(".neworder-btn");
 const payButton = document.querySelector(".pay-btn");
 
 export function populateCart(cart = []) {
@@ -35,8 +35,9 @@ export function populateCart(cart = []) {
 
             newDiv.innerHTML = `
             <div class="cart-item">
-                <div>
+                <div class="textordercart">
                     <span class="item-name">${item.name}</span>
+					<span class="line2"></span>
                     <span class="item-price">${item.price * item.quantity} SEK</span>
                 </div>
             </div>`;
@@ -81,6 +82,8 @@ export function populateCart(cart = []) {
     cartCount.textContent = cart.length;
     console.log("Cart updated:", cart);
 }
+
+
 
 newOrderButton.addEventListener("click", () => {
     cart.length = 0;
