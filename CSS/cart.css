@@ -118,6 +118,9 @@ p {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	border-bottom: var(--cart-grey) dotted 1px;
+	padding-bottom: 8px;
+	padding-top: 8px;
 }
 
 .quantity-buttons {
@@ -144,6 +147,22 @@ p {
 
 .cart-total {
     font-size: 1.5em;
+}
+
+.textordercart {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 2;
+	border-color: var(--chosen-grey);
+}
+
+.line2 {
+	flex-grow: 1;
+	border-bottom: black dotted 1.9px;
+}
+
+.cart-btn {
+	border: none;
 }
 
 @media (max-width: 600px) {

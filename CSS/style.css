@@ -26,7 +26,6 @@ body {
     width: 64px;
     height: 64px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -86,6 +85,17 @@ body {
     padding-bottom: 15px;
 }
 
+.line {
+	flex-grow: 1;
+	border-bottom: white dotted 1px;
+}
+
+.w-item {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
 .w-item, .dips-item, .drink-item {
     font-family: "Fira Sans", sans-serif;
     padding: 20px;
@@ -124,8 +134,14 @@ body {
 
 .item-details {
     font-family: "Fira Sans", sans-serif;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 200;
+	padding-top: 4px;
+}
+
+.textorder {
+	display: flex;
+	flex-direction: row;
 }
 
 .item-name, .item-price {
