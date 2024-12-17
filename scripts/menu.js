@@ -4,6 +4,14 @@ const apiUrl = "https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/";
 const menuElement = document.getElementById('menu-items');
 
 let cart = [];
+let cartCount;
+let cartList;
+
+// DOM elements
+function initializeDOMElements() {
+    cartCount = document.querySelector(".cart-count");
+    cartList = document.querySelector(".cart-list");
+}
 
 async function fetchMenuData() {
     const options = {
@@ -19,7 +27,6 @@ async function fetchMenuData() {
         }
         const data = await response.json();
         return data;
-
     } catch (error) {
         console.error("Error fetching menu data:", error);
     }
@@ -28,15 +35,11 @@ async function fetchMenuData() {
 function addToCart(item) {
     const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
-    if (item.type === "dip") {
-        cart = cart.filter(cartItem => cartItem.type !== "dip");
-    }
-    if (item.type === "drink") {
-        cart = cart.filter(cartItem => cartItem.type !== "drink");
-    }
+    // increase its quantity
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
+        // add it with quantity 1 If it doesn't exist, 
         cart.push({ ...item, quantity: 1 });
     }
 
@@ -48,6 +51,7 @@ function populateMenu(menuData) {
     const wontonsMenu = document.querySelector(".wontons-menu");
     const dipsMenu = document.querySelector(".dips-selection");
     const drinksMenu = document.querySelector(".drink-selection");
+
     const wontonList = menuData.items.filter(item => item.type === "wonton");
     const dipsList = menuData.items.filter(item => item.type === "dip");
     const drinkList = menuData.items.filter(item => item.type === "drink");
@@ -57,9 +61,9 @@ function populateMenu(menuData) {
         newDiv.innerHTML = `
         <div class="w-item">
             <div class="textorder">
-            <span class="item-name">${wonton.name}</span>
-            <span class="line"></span>
-            <span class="item-price">${wonton.price} SEK</span>
+                <span class="item-name">${wonton.name}</span>
+                <span class="line"></span>
+                <span class="item-price">${wonton.price} SEK</span>
             </div>
             <span class="item-details">${wonton.ingredients}</span>
         </div>`;
@@ -107,6 +111,10 @@ async function initMenu() {
     }
 }
 
-initMenu();
+// DOM elements when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    initializeDOMElements();
+    initMenu();
+});
 
-export { cart };
+export { cart, cartCount, cartList };

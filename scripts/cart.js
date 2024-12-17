@@ -5,7 +5,7 @@ const cartCount = document.querySelector(".cart-count");
 const cartButton = document.querySelector(".cart-container #cart-btn");
 const shoppingList = document.querySelector(".shoppinglist");
 const cartList = document.querySelector(".cart-list");
-const newOrderButton = document.querySelectorAll(".neworder-btn");
+const newOrderButton = document.querySelector(".neworder-btn");
 const payButton = document.querySelector(".pay-btn");
 
 export function populateCart(cart = []) {
@@ -37,7 +37,7 @@ export function populateCart(cart = []) {
             <div class="cart-item">
                 <div class="textordercart">
                     <span class="item-name">${item.name}</span>
-					<span class="line2"></span>
+                    <span class="line2"></span>
                     <span class="item-price">${item.price * item.quantity} SEK</span>
                 </div>
             </div>`;
@@ -56,7 +56,6 @@ export function populateCart(cart = []) {
             minusButton.innerText = "-";
             quantity.innerText = `${item.quantity} stycken`;
 
-            
             plusButton.addEventListener("click", () => {
                 item.quantity += 1;
                 updateCartDisplay();
@@ -71,6 +70,7 @@ export function populateCart(cart = []) {
                 }
                 updateCartDisplay();
             });
+
             quantityContainer.append(minusButton, quantity, plusButton);
             newDiv.append(quantityContainer);
             cartList.append(newDiv);
@@ -79,11 +79,13 @@ export function populateCart(cart = []) {
     }
 
     cartTotal.innerText = total + " SEK";
-    cartCount.textContent = cart.length;
+
+    // total number of items in cart
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCount.textContent = totalItems;  // Update cart count
+
     console.log("Cart updated:", cart);
 }
-
-
 
 newOrderButton.addEventListener("click", () => {
     cart.length = 0;

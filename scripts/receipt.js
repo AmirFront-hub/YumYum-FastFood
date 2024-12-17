@@ -1,3 +1,5 @@
+import { populateCart } from "./cart.js";
+
 document.addEventListener("DOMContentLoaded", function () {
     const kvittoBtn = document.getElementById("kvitto-btn");
     const menuContainer = document.querySelector(".menu-container");
@@ -20,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 menuContainer.classList.remove("hidden");
                 receiptContainer.classList.add("hidden");
                 cartContainer.classList.add("hidden");
+                populateCart([]);
             });
         });
     } else {
         console.error("One or more elements are missing from the DOM");
     }
 });
-
