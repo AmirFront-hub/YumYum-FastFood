@@ -87,6 +87,7 @@ body {
     padding: 20px;
     text-align: left;
     box-shadow: black;
+	cursor: pointer;
 }
 
 .dips-selection, .drink-selection {
@@ -98,7 +99,6 @@ body {
 }
 
 .dips-selection > div, .drink-selection > div {
-    cursor: pointer;
     border-radius: 6px;
     padding: 8px;
 }
@@ -142,6 +142,10 @@ body {
 .w-item:hover {
     background-color: rgb(53, 49, 49);
     border-radius: 8px;
+}
+
+.dip-btn > input {
+	cursor: pointer;
 }
 
 input[type="radio"] {

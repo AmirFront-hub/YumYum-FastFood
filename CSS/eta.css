@@ -38,6 +38,7 @@ body {
     padding: 2em;
     border-radius: 5px;
     border: solid #F4F3F1F0;
+	cursor: pointer;
 }
 
 .kvitto-btn:hover {
@@ -54,6 +55,7 @@ body {
     border-radius: 5px;
     border: none;
     text-shadow: none;
+	cursor: pointer;
 }
 
 .neworder-btn:hover {

@@ -72,6 +72,7 @@ p {
     padding: 1.5em 2em;
     border-radius: 5px;
     font-size: 2em;
+	cursor: pointer;
 }
 
 .cart-list {
@@ -130,6 +131,7 @@ p {
     border-bottom: var(--cart-grey) dotted 1px;
     padding-bottom: 8px;
     padding-top: 8px;
+	
 }
 
 .quantity-buttons {
@@ -147,6 +149,7 @@ p {
     background-color: var(--cart-grey);
     color: var(--background-grey);
     padding-bottom: 1px;
+	cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
