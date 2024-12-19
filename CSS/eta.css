@@ -10,11 +10,12 @@ body {
 .eta-container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+	justify-content: center;
+	align-self: center;
     background-color: rgb(96, 88, 88);
-    height: 800px;
     text-shadow: none;
-    padding: 1rem;
+	min-height: 100vh;
+	width: 800px;
 }
 
 .btn-option {
@@ -22,15 +23,19 @@ body {
 	flex-direction: column;
 	gap: 1rem;
 	padding-top: 1em;
-    max-width: auto;
+}
+
+.button-box {
+	padding-bottom: 2em;
+	justify-content: end;
 }
 
 .kvitto-btn {
     font-family: "Fira Sans", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     background-color: rgb(96, 88, 88);
-    padding: 2.0em;
+    padding: 2em;
     border-radius: 5px;
     border: solid #F4F3F1F0;
 }
@@ -63,14 +68,10 @@ body {
     text-align: center;
 }
 
-.eta-container img {
-    width: 390px;
-    height: auto;
-}
+
 
 .neworder-btn, .kvitto-btn {
-    font-size: 24px;
-	line-height: 28.8px;
+    font-size: 15px;
 }
 
 
@@ -78,13 +79,16 @@ body {
     display: none;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
-    .eta-container {
-        width: 75%;
-        max-width: auto;
-        height: auto;
-        padding: 1.5rem;
+
+@media (max-width: 390px) {
+
+	.eta-container {
+        min-width:390px;
     }
+
+
+}
+@media (min-width: 390px) and (max-width: 1024px) {
 
     .kvitto-btn, .neworder-btn {
         font-size: 1.1em;
@@ -97,7 +101,6 @@ body {
 
     .eta-container img {
         width: 100%;
-        height: auto;
     }
 }
 

@@ -13,15 +13,15 @@ body {
 .menu-container {
     background-color: rgb(72, 144, 120);
     width: 390px;
-    height: auto;
     position: relative;
-    margin: 20px;
+	min-height: 100vh;
 }
 
 .button-div {
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 17px;
+	padding-top: 20px;
 }
 
 #cart-btn {

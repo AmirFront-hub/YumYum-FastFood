@@ -40,6 +40,7 @@ p {
     height: 844px;
     text-shadow: none;
     padding: 1rem;
+	min-height: 100vh;
 }
 
 .pricebox {
@@ -60,6 +61,7 @@ p {
     padding: 1em;
     justify-content: space-between;
     border-radius: 5px;
+	font-size: 1.3em;
 }
 
 .pay-btn {
@@ -69,7 +71,7 @@ p {
     background-color: rgb(53, 49, 49);
     padding: 1.5em 2em;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .cart-list {
@@ -194,8 +196,7 @@ p {
     }
 
     .pay-btn {
-        padding: 1em 1.5em;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
