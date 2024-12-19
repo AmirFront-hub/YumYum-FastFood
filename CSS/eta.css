@@ -76,6 +76,10 @@ body {
     font-size: 15px;
 }
 
+label {
+	cursor: pointer;
+}
+
 
 .hidden {
     display: none;
