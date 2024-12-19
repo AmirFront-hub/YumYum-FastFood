@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    text-shadow: 1px 1px 2px #000000;
+    font-family: "Fira Sans", sans-serif;
+}
+
+p.quantity {
+    padding: 0;
+    margin: 0;
+}
+
+.receipt {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(96, 88, 88);
+    text-shadow: none;
+	min-width: 390px;
+	max-width: 1000px;
+	height: auto;
+	width: 1000px;
+	padding: 165px 16px 16px 16px;
+
+}
+
+.receipt-cost {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1em;
+	min-width: auto;
+	color: #000000;
+	background-color: rgb(194, 193, 193);
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.btn-option {
+	padding-top: 4em;
+}
+
+.quantity-container {
+	display: flex;
+	border-bottom: none;
+	text-align: left;
+	padding: none;
+	gap: 7px;
+}
+
+.quantity-container2 {
+	padding-bottom: 5px;
+	font-weight: 600;
+}
+
+.quantity {
+	display: flex;
+	text-align: left;
+}
+
+.receipt-total {
+	font-size: 1.5em;
+}
+
+.receipt header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding-bottom: 1.3em;
+}
+
+.receipt-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 238);
+    color: #000000;
+    border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.logo {
+    width: 50px;
+    height: 60px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 33.6px;
+}
+
+#receipt-details {
+	font-size: 10px;
+	width: Fill (358px)px;
+	height: Hug (304px)px;
+	padding: 16px;
+	gap: 4px;
+	opacity: 0px;
+}
+
+.receipt-details .item-name .line2 .item-price {
+
+	font-size: small;
+}
+
+@media (min-width: 1025px) {
+    .receipt{
+    
+        min-width:390px;
+        height: auto;
+        padding: 2rem;
+    }
+
+	.neworder-btn {
+        font-size: 1em;
+        padding: 3em;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
